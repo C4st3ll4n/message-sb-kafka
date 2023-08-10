@@ -19,7 +19,7 @@ public class MessageSbApplication {
 @RestController
 @RequestMapping("/kafka")
 class HelloController{
-	private MessageProducer service;
+	private final MessageProducer service;
 
 	public HelloController(MessageProducer service) {
 		this.service = service;

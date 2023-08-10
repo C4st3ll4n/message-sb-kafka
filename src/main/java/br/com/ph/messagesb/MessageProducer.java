@@ -6,12 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class MessageProducer {
 
-
-
-    static {
-
-    }
-    private KafkaTemplate<String, String> template;
+    private final KafkaTemplate<String, String> template;
 
     public MessageProducer(KafkaTemplate<String, String> template) {
         this.template = template;
